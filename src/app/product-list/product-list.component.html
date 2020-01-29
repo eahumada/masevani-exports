@@ -1,0 +1,53 @@
+<h2>Shipments List</h2>
+
+<div *ngFor="let invoice of products">
+
+  <span>
+  <h4>
+    <a [title]="invoice.name + ' details'">
+      {{ invoice.id }}
+      {{ invoice.name }}
+    </a>
+  </h4>
+  </span>
+
+  <p *ngIf="invoice.description">
+    <span>
+      Description: {{ invoice.description }}
+    </span>
+    <br>
+    <span>
+      Quantity: {{ invoice.quantity }}
+      , Invoice $: {{ invoice.invoiceAmount }}
+      , Insurance $ AndCo: {{ invoice.insuranceAmountAndCo }}
+      , Shipping: {{ invoice.shipping }}
+      , DepartDate: {{ invoice.departDate}}
+      , ArrivalDate: {{ invoice.arrivalDate }}
+     , BL: {{ invoice.bl }}
+    </span>
+
+  </p>
+
+  <button (click)="share()">
+    Share
+  </button>
+  &nbsp;
+  <button (click)="edit()">
+    Edit
+  </button>
+  &nbsp;
+  <button (click)="addDocument()">
+    Add document
+  </button>
+  &nbsp;
+  <button (click)="sendMailAlert()">
+    Fund Forecast
+  </button>
+
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

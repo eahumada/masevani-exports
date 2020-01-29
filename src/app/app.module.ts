@@ -5,8 +5,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './shipment-list/shipment-list.component';
+
 import { MenuListComponent } from './menu-list/menu-list.component';
+
+import { CustomsBrokerListComponent } from './customsbroker-list/customsbroker-list.component';
+import { ShipmentListComponent } from './shipment-list/shipment-list.component';
 
 import { LoginComponent } from './login';
 // import { RegisterComponent } from './register';
@@ -17,14 +20,19 @@ import { LoginComponent } from './login';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: MenuListComponent },
-      { path: 'shipments', component: ProductListComponent }
+      { path: 'login', component: LoginComponent },
+      { path: 'customsbroker', component: CustomsBrokerListComponent },
+      { path: 'shipments', component: ShipmentListComponent },
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     MenuListComponent,
-    ProductListComponent,
+
+    CustomsBrokerListComponent,
+    ShipmentListComponent,
+    
     LoginComponent
   ],
   bootstrap: [ AppComponent ]

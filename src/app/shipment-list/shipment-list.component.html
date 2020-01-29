@@ -1,32 +1,31 @@
 <h2>Shipments List</h2>
 
-<div *ngFor="let shiment of shipments">
+<div *ngFor="let shipment of shipments">
 
   <span>
-  <h4>
-    <a [title]="shiment.name + ' details'">
-      {{ shiment.id }}
-      {{ shiment.name }}
-    </a>
-  </h4>
+    <h4>
+      <a [title]="shipment.name + ' details'">
+        {{ shipment.id }}
+        {{ shipment.name }}
+      </a>
+    </h4>
+    <p *ngIf="shipment.description">
+      <span>
+        Description: {{ shipment.description }}
+      </span>
+      <br>
+      <span>
+        Quantity: {{ shipment.quantity }}
+        , Invoice $: {{ shipment.invoiceAmount }}
+        , Insurance $ AndCo: {{ shipment.insuranceAmountAndCo }}
+        , Shipping: {{ shipment.shipping }}
+        , DepartDate: {{ shipment.departDate}}
+        , ArrivalDate: {{ shipment.arrivalDate }}
+      , BL: {{ shipment.bl }}
+      </span>
+
+    </p>
   </span>
-
-  <p *ngIf="invoice.description">
-    <span>
-      Description: {{ shiment.description }}
-    </span>
-    <br>
-    <span>
-      Quantity: {{ shiment.quantity }}
-      , Invoice $: {{ shiment.invoiceAmount }}
-      , Insurance $ AndCo: {{ shiment.insuranceAmountAndCo }}
-      , Shipping: {{ shiment.shipping }}
-      , DepartDate: {{ shiment.departDate}}
-      , ArrivalDate: {{ shiment.arrivalDate }}
-     , BL: {{ shiment.bl }}
-    </span>
-
-  </p>
 
   <button (click)="share()">
     Share

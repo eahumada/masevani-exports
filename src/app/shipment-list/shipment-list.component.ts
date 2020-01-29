@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { shipments } from '../shipments';
+import { shipments } from '../data/shipments';
 
 @Component({
   selector: 'app-shipment-list',

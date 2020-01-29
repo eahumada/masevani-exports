@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { ProductListComponent } from './shipment-list/shipment-list.component';
 import { MenuListComponent } from './menu-list/menu-list.component';
 
 import { LoginComponent } from './login';

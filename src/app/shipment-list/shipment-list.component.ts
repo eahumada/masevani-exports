@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 
-import { products } from '../products';
+import { shipments } from '../shipments';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: 'app-shipment-list',
+  templateUrl: './shipment-list.component.html',
+  styleUrls: ['./shipment-list.component.css']
 })
 
-export class ProductListComponent {
-  products = products;
+export class ShipmentListComponent {
+  shipments = shipments;
 
   share() {
     window.alert('Dialog to share the information.');

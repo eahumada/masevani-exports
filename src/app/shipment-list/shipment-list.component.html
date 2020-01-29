@@ -1,29 +1,29 @@
 <h2>Shipments List</h2>
 
-<div *ngFor="let invoice of products">
+<div *ngFor="let shiment of shipments">
 
   <span>
   <h4>
-    <a [title]="invoice.name + ' details'">
-      {{ invoice.id }}
-      {{ invoice.name }}
+    <a [title]="shiment.name + ' details'">
+      {{ shiment.id }}
+      {{ shiment.name }}
     </a>
   </h4>
   </span>
 
   <p *ngIf="invoice.description">
     <span>
-      Description: {{ invoice.description }}
+      Description: {{ shiment.description }}
     </span>
     <br>
     <span>
-      Quantity: {{ invoice.quantity }}
-      , Invoice $: {{ invoice.invoiceAmount }}
-      , Insurance $ AndCo: {{ invoice.insuranceAmountAndCo }}
-      , Shipping: {{ invoice.shipping }}
-      , DepartDate: {{ invoice.departDate}}
-      , ArrivalDate: {{ invoice.arrivalDate }}
-     , BL: {{ invoice.bl }}
+      Quantity: {{ shiment.quantity }}
+      , Invoice $: {{ shiment.invoiceAmount }}
+      , Insurance $ AndCo: {{ shiment.insuranceAmountAndCo }}
+      , Shipping: {{ shiment.shipping }}
+      , DepartDate: {{ shiment.departDate}}
+      , ArrivalDate: {{ shiment.arrivalDate }}
+     , BL: {{ shiment.bl }}
     </span>
 
   </p>

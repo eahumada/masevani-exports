@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { customsBrokers } from '../data/customs-brokers';
+
 @Component({
   selector: 'app-customsbroker-list',
   templateUrl: './customsbroker-list.component.html',
@@ -7,6 +9,7 @@ import { Component } from '@angular/core';
 })
 
 export class CustomsBrokerListComponent {
+  customsbrokers = customsBrokers;
 
 }
 
